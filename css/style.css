@@ -1,0 +1,437 @@
+/* 
+COMP 1850:  Assignment 04
+author: Mahmoud Ektefaie	
+date:   08/05/2022
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Macondo&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* =================================== */
+/* General Styling */
+/* =================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  /* font-size: 1.1rem; */
+  font-weight: 300;
+  color: #243333;
+  background-color: #6699982e;
+  font-family: 'Poppins', sans-serif;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 790px;
+  margin: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-family: 'Macondo', cursive;
+  font-size: 4rem;
+  margin-left: 0.6em;
+  color: #fcfcfc;
+  text-shadow: 0 1px 1px #243635;
+}
+
+h2 {
+  font-family: 'Macondo', cursive;
+  font-size: 2rem;
+  margin: 0.5em 0;
+  color: #996667;
+  text-shadow: 0 1px 1px #5a3c3d;
+}
+
+h3 {
+  /* font-family: 'Macondo', cursive; */
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #363636;
+  padding-bottom: 0.25em;
+}
+
+.underline {
+  text-align: center;
+  font-size: 3rem;
+  text-decoration: none;
+  position: relative;
+}
+
+.underline:before {
+  position: absolute;
+  content: '';
+  height: 2px;
+  /* adjust this to move up and down. you may have to adjust the line height of the paragraph if you move it down a lot. */
+  bottom: -4px;
+  /* center - (optional) use with adjusting width   */
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 40%;
+  background: #5a3c3dba;
+}
+
+a:link,
+a:visited {
+  color: #375e5e;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: #a5621b;
+}
+
+.ad {
+  margin: 0.5em auto;
+  border-top: 1px dotted #536f6e;
+  border-bottom: 1px dotted #536f6e;
+  background-color: #e0d1d3;
+}
+
+.ad img {
+  width: 60%;
+  display: block;
+  margin: auto;
+}
+
+/* =================================== */
+/* HEADER Section*/
+/* =================================== */
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 3em 0 3em 2em;
+  background-color: #595959;
+}
+
+.logo {
+  width: 65px;
+}
+
+/* =================================== */
+/* NAV Section*/
+/* =================================== */
+
+nav {
+  font-family: 'Macondo', cursive;
+  background-color: #996667;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 1px #5a3c3d;
+  font-size: 1.2rem;
+  padding: 0.25em 1em;
+  margin: 0 0.5em;
+  display: inline-block;
+}
+
+nav ul li a:link,
+nav ul li a:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  color: #f8cdceea;
+  border-radius: 20px;
+  border-bottom: ridge 2px #f8cdceea;
+  border-top: ridge 2px #669998;
+}
+
+nav ul li a.active {
+  border-radius: 20px;
+  border-bottom: ridge 2px #f8cdceea;
+  border-top: ridge 2px #669998;
+  color: #fff;
+}
+
+/* =================================== */
+/* Main Sections */
+/* =================================== */
+
+main {
+  background-color: #f2dfe2;
+  flex: 1;
+  padding-bottom: 2em;
+}
+
+#top,
+#middle,
+#bottom,
+#low {
+  margin: 3em 0.5em;
+  padding: 1em;
+  border-radius: 7px;
+  border: 2px ridge #5a3c3d61;
+}
+
+#low {
+  margin: 1em 0.5em;
+  /* padding: 1em; */
+}
+
+#low h2.underline {
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+
+.index-top,
+.index-middle,
+.index-bottom {
+  display: flex;
+  justify-content: space-around;
+  padding: 4px;
+}
+
+.index-top article {
+  width: 33%;
+  padding: 2em 1.5em;
+  background-color: #bed983;
+}
+
+.index-middle article {
+  width: 49%;
+  padding: 1em;
+  background-color: #bed983;
+}
+
+.index-bottom article {
+  width: 24%;
+  padding: 1em;
+  background-color: #a4bf69;
+}
+
+.big-page {
+  display: flex;
+  flex-direction: column;
+  margin: 2em 0.5em;
+  padding: 1em;
+  border-radius: 7px;
+  border: 2px ridge #5a3c3d61;
+}
+
+.big-page h3,
+.big-page h4,
+.big-page h5,
+.big-page h6 {
+  font-family: 'Macondo', cursive;
+  color: #7e5353;
+  text-shadow: 0 1px 1px #312121;
+  margin-top: 1em;
+  letter-spacing: 1.2px;
+}
+
+.big-page h3 {
+  font-size: 1.4rem;
+}
+
+.big-page h4 {
+  font-size: 1.2rem;
+}
+
+.big-page h5 {
+  font-size: 1rem;
+}
+
+.big-page h6 {
+  font-size: 0.8rem;
+}
+
+.big-page p {
+  padding: 1em 0;
+}
+
+.big-page ul {
+  list-style-type: none;
+}
+
+.big-page ol {
+  list-style-type: upper-roman;
+  margin-left: 45px;
+  font-weight: 400;
+}
+
+.big-page ul li:before {
+  content: '';
+  display: inline-block;
+  height: 12px;
+  width: 15px;
+  background-image: url(../images/orange-arrow.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 25px;
+  padding-left: 5px;
+}
+
+.article-image {
+  float: right;
+  margin: 1.5em 0 0.25em 0.25em;
+  border: ridge 3px #bb9697;
+  border-radius: 4px;
+}
+
+blockquote {
+  width: 70%;
+  background: #cacaca8a;
+  border-left: 10px solid #93ad9b;
+  margin: 2em auto;
+  padding: 1.5em;
+  quotes: '\201C''\201D''\2018''\2019';
+}
+
+blockquote:before {
+  color: #93ad9b;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  vertical-align: -0.4em;
+}
+
+.cite {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.data {
+  width: 70%;
+  margin: 3em auto;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #ffffc8;
+}
+
+td {
+  padding: 0.5em;
+  background-color: #fefff4;
+}
+
+pre {
+  width: 60%;
+  padding: 0.5em;
+  margin-left: 1.5em;
+  overflow: auto;
+  overflow-y: hidden;
+  font-size: 0.9rem;
+  line-height: 20px;
+  background: #212121;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 7px;
+}
+
+pre code {
+  color: rgb(241, 242, 233);
+}
+
+.low-page {
+  text-align: center;
+  background-color: #bed983;
+}
+
+/* =================================== */
+/* Footer Section*/
+/* =================================== */
+
+footer {
+  padding: 0.5em 0 1.5em;
+  background-color: #595959;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer h2 {
+  letter-spacing: 2px;
+  font-family: 'Macondo', cursive;
+  font-size: 1.3rem;
+  color: #fcfcfc;
+  text-shadow: 1px 1px 3px #243635;
+}
+
+.footer-left,
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-left p {
+  letter-spacing: 1px;
+  font-size: small;
+  color: #fff;
+  text-shadow: 0 1px 4px #243635;
+  border-radius: 7px;
+  border-right: ridge 2px #f8cdceea;
+  border-left: ridge 2px #f8cdceea;
+  padding: 0.5em 1.5em;
+  margin-bottom: 0.75em;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer ul li:before {
+  content: '';
+  display: inline-block;
+  height: 12px;
+  width: 15px;
+  background-image: url(../images/pink-arrow.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: -15px;
+}
+
+footer ul li a {
+  padding-left: 0.25em;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 200;
+  color: #fff;
+}
+
+footer ul li a:link,
+footer ul li a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer ul li a:hover,
+footer ul li a:focus {
+  color: #dcd0c5;
+}
